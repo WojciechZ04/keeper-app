@@ -27,7 +27,7 @@ function About() {
           <p>routing for different pages,</p>
         </li>
         <li>
-          <p>using MUI elements and icons.</p>
+          <p>using React UI tools (MUI).</p>
         </li>
       </ul>
       <p>
