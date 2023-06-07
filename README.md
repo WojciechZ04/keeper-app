@@ -1,5 +1,5 @@
-============= English version =============
-
+#Keeper App Documentation
+##English
 "Keeper" is project inspired by Google Keep App. It allows to make fast
 notes to write down your ideas. This project was completly focused on
 React framework. It was one of the biggest projects covered in The
@@ -16,8 +16,7 @@ Project could be further developed by adding some functionalities like
 adding database, which would keep the notes and using accounts so each
 person could create his own notes.
 
-============= Polska wersja =============
-
+##Polski 
 Aplikacja "Keeper" została zainspirowana aplikacją Google Keep. Służy do szybkiego 
 tworzenia notatek, w których można zapisać swoje pomysły. Projekt skupia się w 
 całości na wykorzystywanym frameworku Reacta. Keeper był jednym z największych 
