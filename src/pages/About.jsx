@@ -37,13 +37,15 @@ function About() {
       </p>
 
       <Box textAlign="center">
-        <p style={{textAlign: "center"}}>If you want to see source code, click button below.</p>
+        <p style={{ textAlign: "center" }}>
+          If you want to see source code, click button below.
+        </p>
         <Button
           variant="contained"
           color="secondary"
           sx={{ backgroundColor: "black", textTransform: "capitalize" }}
           href="https://github.com/WojciechZ04/keeper-app"
-		  target="_blank"
+          target="_blank"
           startIcon={<GitHubIcon />}
         >
           Keeper App Repository

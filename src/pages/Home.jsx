@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
 import Note from "../components/Note.jsx";
 import CreateArea from "../components/CreateArea.jsx";
 
@@ -8,13 +6,13 @@ function Home() {
   const [notes, setNotes] = useState([]);
 
   function addNote(newNote) {
-    setNotes(prevNotes => {
+    setNotes((prevNotes) => {
       return [...prevNotes, newNote];
     });
   }
 
   function deleteNote(id) {
-    setNotes(prevNotes => {
+    setNotes((prevNotes) => {
       return prevNotes.filter((noteItem, index) => {
         return index !== id;
       });
@@ -22,19 +20,21 @@ function Home() {
   }
 
   return (
-    <div>
+    <div className="container">
       <CreateArea onAdd={addNote} />
-      {notes.map((noteItem, index) => {
-        return (
-          <Note
-            key={index}
-            id={index}
-            title={noteItem.title}
-            content={noteItem.content}
-            onDelete={deleteNote}
-          />
-        );
-      })}
+      <div className="notes">
+        {notes.map((noteItem, index) => {
+          return (
+            <Note
+              key={index}
+              id={index}
+              title={noteItem.title}
+              content={noteItem.content}
+              onDelete={deleteNote}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
