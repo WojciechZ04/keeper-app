@@ -3,7 +3,6 @@ import HighlightIcon from "@mui/icons-material/Highlight";
 
 function Header() {
   return (
-    <div>
       <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
         <a
           href="/"
@@ -33,7 +32,6 @@ function Header() {
           </li>
         </ul>
       </header>
-    </div>
   );
 }
 
