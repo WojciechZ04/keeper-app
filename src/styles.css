@@ -7,6 +7,12 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 header {
   background-color: #f5ba13;
   width: 100%;
@@ -103,7 +109,7 @@ header {
 
 form.create-note {
   position: relative;
-  width: 480px;
+  /* width: 480px; */
   margin: 30px auto 20px auto;
   background: #fff;
   padding: 15px;
@@ -125,6 +131,7 @@ form.create-note button {
   position: absolute;
   right: 18px;
   bottom: -18px;
+  z-index: 1;
   background: #f5ba13;
   color: #fff;
   border: none;
