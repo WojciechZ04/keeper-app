@@ -30,6 +30,7 @@ function Home() {
               id={index}
               title={noteItem.title}
               content={noteItem.content}
+              date={noteItem.date}
               onDelete={deleteNote}
             />
           );

@@ -10,6 +10,7 @@ function CreateArea(props) {
   const [note, setNote] = useState({
     title: "",
     content: "",
+    date: "",
   });
 
   const titleCharLimit = 50;
@@ -21,16 +22,23 @@ function CreateArea(props) {
     setNote((prevNote) => {
       return {
         ...prevNote,
-        [name]: value.slice(0, name === "title" ? titleCharLimit : contentCharLimit),
+        [name]: value.slice(
+          0,
+          name === "title" ? titleCharLimit : contentCharLimit
+        ),
       };
     });
   }
 
   function submitNote(event) {
-    props.onAdd(note);
+    const currentDate = new Date().toLocaleDateString();
+    props.onAdd({ ...note, date: currentDate });
+    console.log(currentDate);
+
     setNote({
       title: "",
       content: "",
+      date: "",
     });
     setExpanded(false);
     event.preventDefault();
@@ -42,7 +50,12 @@ function CreateArea(props) {
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (createAreaRef.current && !createAreaRef.current.contains(event.target)) {
+      if (
+        createAreaRef.current &&
+        !createAreaRef.current.contains(event.target) &&
+        note.title === "" &&
+        note.content === ""
+      ) {
         setExpanded(false);
       }
     }
@@ -51,10 +64,13 @@ function CreateArea(props) {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [createAreaRef]);
+  }, [createAreaRef, note]);
 
   return (
-    <div ref={createAreaRef} className="relative bg-white p-4 rounded-lg shadow-xl w-3/4 lg:w-[600px] mx-auto my-10 h-auto">
+    <div
+      ref={createAreaRef}
+      className="relative bg-white p-4 rounded-lg shadow-xl w-3/4 lg:w-[600px] mx-auto my-10 h-auto"
+    >
       <form className="create-note">
         {isExpanded && (
           <div className="pb-2">

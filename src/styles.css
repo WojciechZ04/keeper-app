@@ -76,14 +76,11 @@ body {
 }
 
 .note p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
 }
 
 .note button {
   position: relative;
-  float: right;
-  margin-right: 10px;
+  float: left;
   color: #f5ba13;
   background-color: #fff;
   border: none;
