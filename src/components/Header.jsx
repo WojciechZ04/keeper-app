@@ -24,7 +24,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="bg-yellow-500 w-full p-4 md:p-8 shadow-md flex flex-wrap justify-center items-center text-sm sm:text-base md:text-lg lg:text-xl">
+    <header className="bg-yellow-500 w-full py-4 px-5 md:p-8 shadow-md flex flex-wrap justify-center items-center text-sm sm:text-base md:text-lg lg:text-xl">
       {" "}
       <button className="md:hidden  absolute left-4" onClick={toggleSidebar}>
         <svg className="w-10 h-10 logo">
@@ -37,15 +37,12 @@ function Header() {
         </svg>
         <span class="text-3xl">Keeper</span>
       </a>
-      <nav className="hidden md:flex space-x-4">
+      <nav className="hidden md:flex space-x-8">
         <a href="/" className="nav-link logo">
           Home
         </a>
         <a href="/about" className="nav-link logo">
           About
-        </a>
-        <a href="/contact" className="nav-link logo">
-          Contact
         </a>
       </nav>
       <div
@@ -64,9 +61,6 @@ function Header() {
           </a>
           <a href="/about" className="nav-link logo text-2xl">
             About
-          </a>
-          <a href="/contact" className="nav-link logo text-2xl">
-            Contact
           </a>
         </nav>
       </div>
