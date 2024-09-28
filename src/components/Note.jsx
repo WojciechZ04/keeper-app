@@ -11,7 +11,7 @@ function Note(props) {
   return (
     <div className="note">
       {props.title && <h1>{props.title}</h1>}
-      <p>{props.content}</p>
+      <p className="overflow-y-auto">{props.content}</p>
       <div className="flex items-center pt-2">
         <p className="text-gray-500 text-xs align-self-center mr-auto">{props.date}</p>
         <button onClick={handleClick} className="p-0">
