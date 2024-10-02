@@ -7,24 +7,16 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
-header {
-  background-color: #f5ba13;
-  width: 100%;
-  padding: 16px 32px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+.background {
+  background: #929292;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
-
-.logo {
-  color: #fff;
-  font-family: "McLaren", cursive;
-  font-weight: 200;
-}
-
 
 .notes {
   display: grid;
@@ -46,6 +38,9 @@ header {
   margin: 0 auto;
   max-height: 300px;
   display: flex;
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+  word-break: break-all; 
   
   flex-direction: column;
   height: auto;
@@ -61,27 +56,6 @@ header {
   border-color: #c0b595;
 }
 
-.note p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
-  /* Remove flex-grow: 1; */
-}
-
-.note button {
-  position: relative;
-  float: right;
-  margin-right: 10px;
-  color: #f5ba13;
-  background-color: #fff;
-  border: none;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  outline: none;
-}
 
 .about {
   background: #fff;
@@ -101,37 +75,9 @@ header {
   text-justify: newspaper;
 }
 
-form.create-note {
-  position: relative;
-  width: 480px;
-  margin: 30px auto 20px auto;
-  background: #fff;
-  padding: 15px;
-  border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138, 137, 137);
-}
-form.create-note input,
-form.create-note textarea {
+.borders {
   width: 100%;
-  border: none;
-  padding: 4px;
-  outline: none;
-  font-size: 1.2em;
-  font-family: inherit;
-  resize: none;
-}
-
-form.create-note button {
-  position: absolute;
-  right: 18px;
-  bottom: -18px;
-  background: #f5ba13;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  outline: none;
+  border-style: dotted;
+  border-width: 0 0 1px 0;
+  border-color: #c0b595;
 }
