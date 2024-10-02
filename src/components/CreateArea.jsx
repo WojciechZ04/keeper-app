@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import Zoom from "@mui/material/Zoom";
-import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 
 function CreateArea(props) {
@@ -69,13 +68,13 @@ function CreateArea(props) {
   return (
     <div
       ref={createAreaRef}
-      className="relative bg-white p-4 rounded-lg shadow-xl w-3/4 lg:w-[600px] mx-auto my-10 h-auto"
+      className="relative bg-white p-4 rounded-lg shadow-xl w-3/4 lg:w-[700px] mx-auto my-10 h-auto"
     >
       <form className="create-note">
         {isExpanded && (
           <div className="pb-2">
             <input
-              className="font-semibold"
+              className="font-semibold outline-none text-xl h-auto resize-none"
               name="title"
               onChange={handleChange}
               value={note.title}
@@ -93,6 +92,7 @@ function CreateArea(props) {
 
         <textarea
           name="content"
+          className="outline-none text-xl h-auto resize-none"
           onClick={expand}
           onChange={handleChange}
           value={note.content}
@@ -110,10 +110,10 @@ function CreateArea(props) {
             )}
           </div>
         )}
-        <Zoom in={isExpanded}>
-          <Fab onClick={submitNote}>
+        <Zoom in={isExpanded} >
+          <button onClick={submitNote}className="absolute right-12 bottom-[-24px] z-10 bg-yellow-500 text-white border-none rounded-full w-12 h-12 shadow-md cursor-pointer outline-none flex items-center justify-center hover:bg-gray-700">
             <AddIcon />
-          </Fab>
+          </button>
         </Zoom>
       </form>
     </div>
