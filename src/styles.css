@@ -28,35 +28,6 @@ body {
   flex-grow: 1;
 }
 
-
-.note {
-  background: #fff;
-  border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
-  padding: 20px;
-  width: 250px;
-  margin: 0 auto;
-  max-height: 300px;
-  display: flex;
-  word-wrap: break-word; 
-  overflow-wrap: break-word; 
-  word-break: break-all; 
-  
-  flex-direction: column;
-  height: auto;
-}
-
-.note h1 {
-  font-size: 1.3em;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  flex-shrink: 0;
-  border-style: dotted;
-  border-width: 0 0 1px 0;
-  border-color: #c0b595;
-}
-
-
 .about {
   background: #fff;
   border-radius: 7px;
@@ -73,11 +44,4 @@ body {
 .about p {
   text-align: justify;
   text-justify: newspaper;
-}
-
-.borders {
-  width: 100%;
-  border-style: dotted;
-  border-width: 0 0 1px 0;
-  border-color: #c0b595;
 }

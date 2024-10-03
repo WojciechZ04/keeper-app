@@ -74,7 +74,7 @@ function CreateArea(props) {
         {isExpanded && (
           <div className="pb-2">
             <input
-              className="font-semibold outline-none text-xl h-auto resize-none"
+              className="font-semibold outline-none text-xl h-auto resize-none border-b border-dotted border-b-[#c0b595] w-full"
               name="title"
               onChange={handleChange}
               value={note.title}
@@ -92,7 +92,7 @@ function CreateArea(props) {
 
         <textarea
           name="content"
-          className="outline-none text-xl h-auto resize-none"
+          className="outline-none text-xl h-auto resize-none w-full"
           onClick={expand}
           onChange={handleChange}
           value={note.content}
@@ -110,8 +110,11 @@ function CreateArea(props) {
             )}
           </div>
         )}
-        <Zoom in={isExpanded} >
-          <button onClick={submitNote}className="absolute right-12 bottom-[-24px] z-10 bg-yellow-500 text-white border-none rounded-full w-12 h-12 shadow-md cursor-pointer outline-none flex items-center justify-center hover:bg-gray-700">
+        <Zoom in={isExpanded}>
+          <button
+            onClick={submitNote}
+            className="absolute right-12 bottom-[-24px] z-10 bg-yellow-500 text-white border-none rounded-full w-12 h-12 shadow-md cursor-pointer outline-none flex items-center justify-center hover:bg-gray-700"
+          >
             <AddIcon />
           </button>
         </Zoom>
