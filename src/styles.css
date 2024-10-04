@@ -18,14 +18,6 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-.notes {
-  display: flex;
-  justify-content: center; /* Center notes */
-  flex-wrap: wrap; /* Allow wrapping */
-  gap: 20px; /* Space between notes */
-  padding: 20px;
-}
-
 .about {
   background: #fff;
   border-radius: 7px;
@@ -42,4 +34,21 @@ body {
 .about p {
   text-align: justify;
   text-justify: newspaper;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #b4b4b4;
 }

@@ -20,7 +20,7 @@ function Home() {
   }
 
   return (
-    <div className="px-4 pt-2 pb-12">
+    <div className="px-4 pb-12">
       <CreateArea onAdd={addNote} />
       <div className="flex justify-center flex-wrap gap-5">
         {notes.map((noteItem, index) => {

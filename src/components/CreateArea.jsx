@@ -68,7 +68,7 @@ function CreateArea(props) {
   return (
     <div
       ref={createAreaRef}
-      className="relative bg-white p-4 rounded-lg shadow-xl md:w-[700px] mx-auto my-10 h-auto"
+      className="relative bg-white p-4 rounded-lg shadow-xl md:w-[700px] mx-auto my-20 h-auto"
     >
       <form className="create-note">
         {isExpanded && (

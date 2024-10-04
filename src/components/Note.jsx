@@ -9,9 +9,9 @@ function Note(props) {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 mx-auto max-h-72 flex flex-col overflow-hidden break-words flex-1 flex-shrink-0 basis-[240px] max-w-sm">
+    <div className="bg-white rounded-lg shadow-md p-4 mx-auto max-h-74 flex flex-col overflow-hidden break-words flex-1 flex-shrink-0 basis-[240px] max-w-sm">
       {props.title && (
-        <h1 className="w-full text-xl pb-2.5 mb-2.5 flex-shrink-0 border-b border-dotted border-b-[#c0b595]">
+        <h1 className="w-full text-xl font-semibold pb-2.5 mb-2.5 flex-shrink-0 border-b border-dotted border-b-[#c0b595]">
           {props.title}
         </h1>
       )}
@@ -22,7 +22,7 @@ function Note(props) {
         </p>
         <button
           onClick={handleClick}
-          className="p-0 relative float-left text-yellow-500 bg-white border-none w-9 h-9 cursor-pointer outline-none flex items-center justify-center hover:bg-gray-700"
+          className="p-0 relative float-left text-yellow-500 bg-white border-none w-9 h-9 cursor-pointer outline-none flex items-center justify-center hover:text-gray-700"
         >
           <DeleteIcon />
         </button>
