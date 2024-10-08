@@ -6,17 +6,13 @@ function Home() {
   const [notes, setNotes] = useState([]);
 
   function addNote(newNote) {
-    setNotes((prevNotes) => {
-      return [...prevNotes, newNote];
-    });
+    setNotes((prevNotes) => [...prevNotes, newNote]);
   }
 
   function deleteNote(id) {
-    setNotes((prevNotes) => {
-      return prevNotes.filter((noteItem, index) => {
-        return index !== id;
-      });
-    });
+    setNotes((prevNotes) =>
+      prevNotes.filter((noteItem, index) => index !== id)
+    );
   }
 
   return (

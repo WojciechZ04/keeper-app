@@ -2,14 +2,12 @@ import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 function Note(props) {
-  console.log(props);
-
   function handleClick() {
     props.onDelete(props.id);
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-5 mx-auto max-h-74 flex flex-col overflow-hidden break-words flex-1 flex-shrink-0 basis-[240px] max-w-sm">
+    <div className="bg-white rounded-lg shadow-lg p-5 mx-auto max-h-74 flex flex-col overflow-hidden break-words flex-1 flex-shrink-0 basis-[240px] max-w-sm">
       {props.title && (
         <h1 className="w-full text-xl font-semibold pb-2 mb-3 flex-shrink-0 border-b border-dotted border-b-[#c0b595]">
           {props.title}

@@ -18,21 +18,19 @@ function CreateArea(props) {
   function handleChange(event) {
     const { name, value } = event.target;
 
-    setNote((prevNote) => {
-      return {
-        ...prevNote,
-        [name]: value.slice(
-          0,
-          name === "title" ? titleCharLimit : contentCharLimit
-        ),
-      };
-    });
+    setNote((prevNote) => ({
+      ...prevNote,
+      [name]: value.slice(
+        0,
+        name === "title" ? titleCharLimit : contentCharLimit
+      ),
+    }));
   }
 
   function submitNote(event) {
+    event.preventDefault(); //Prevent page from refreshing
     const currentDate = new Date().toLocaleDateString();
     props.onAdd({ ...note, date: currentDate });
-    console.log(currentDate);
 
     setNote({
       title: "",
@@ -40,7 +38,6 @@ function CreateArea(props) {
       date: "",
     });
     setExpanded(false);
-    event.preventDefault();
   }
 
   function expand() {

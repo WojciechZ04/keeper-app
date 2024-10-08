@@ -1,8 +1,6 @@
 import React from "react";
-import { Button, Box } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import data from "../assets/about.json";
-import "../styles.css";
 
 function About() {
   return (
@@ -19,21 +17,20 @@ function About() {
         ))}
       </ul>
 
-      <Box className="text-center">
+      <div className="text-center">
         <p className="py-3">
           Source code of this project is available on GitHub:
         </p>
-        <Button
-          variant="contained"
-          color="secondary"
-          sx={{ backgroundColor: "black", textTransform: "capitalize" }}
+        <a
+          className="font-semibold shadow-lg bg-black text-white capitalize hover:bg-yellow-500 hover:text-black p-4 rounded-lg inline-flex items-center"
           href="https://github.com/WojciechZ04/keeper-app"
           target="_blank"
-          startIcon={<GitHubIcon />}
+          rel="noreferrer"
         >
-          Keeper App Repository
-        </Button>
-      </Box>
+          <GitHubIcon />
+          <span className="pl-3">Keeper App Repository</span>
+        </a>
+      </div>
     </div>
   );
 }
