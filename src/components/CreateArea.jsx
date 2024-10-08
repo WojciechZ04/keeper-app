@@ -18,21 +18,19 @@ function CreateArea(props) {
   function handleChange(event) {
     const { name, value } = event.target;
 
-    setNote((prevNote) => {
-      return {
-        ...prevNote,
-        [name]: value.slice(
-          0,
-          name === "title" ? titleCharLimit : contentCharLimit
-        ),
-      };
-    });
+    setNote((prevNote) => ({
+      ...prevNote,
+      [name]: value.slice(
+        0,
+        name === "title" ? titleCharLimit : contentCharLimit
+      ),
+    }));
   }
 
   function submitNote(event) {
+    event.preventDefault(); //Prevent page from refreshing
     const currentDate = new Date().toLocaleDateString();
     props.onAdd({ ...note, date: currentDate });
-    console.log(currentDate);
 
     setNote({
       title: "",
@@ -40,7 +38,6 @@ function CreateArea(props) {
       date: "",
     });
     setExpanded(false);
-    event.preventDefault();
   }
 
   function expand() {
@@ -68,13 +65,13 @@ function CreateArea(props) {
   return (
     <div
       ref={createAreaRef}
-      className="relative bg-white p-4 rounded-lg shadow-xl w-3/4 lg:w-[700px] mx-auto my-10 h-auto"
+      className="relative bg-white p-6 rounded-lg shadow-xl md:w-[700px] mx-auto my-20 h-auto"
     >
       <form className="create-note">
         {isExpanded && (
-          <div className="pb-2">
+          <div className="pb-3">
             <input
-              className="font-semibold outline-none text-xl h-auto resize-none"
+              className="font-semibold outline-none text-xl h-auto resize-none border-b border-dotted border-b-[#c0b595] w-full pb-2"
               name="title"
               onChange={handleChange}
               value={note.title}
@@ -92,7 +89,7 @@ function CreateArea(props) {
 
         <textarea
           name="content"
-          className="outline-none text-xl h-auto resize-none"
+          className="outline-none text-xl h-auto resize-none w-full"
           onClick={expand}
           onChange={handleChange}
           value={note.content}
@@ -110,8 +107,11 @@ function CreateArea(props) {
             )}
           </div>
         )}
-        <Zoom in={isExpanded} >
-          <button onClick={submitNote}className="absolute right-12 bottom-[-24px] z-10 bg-yellow-500 text-white border-none rounded-full w-12 h-12 shadow-md cursor-pointer outline-none flex items-center justify-center hover:bg-gray-700">
+        <Zoom in={isExpanded}>
+          <button
+            onClick={submitNote}
+            className="absolute right-12 bottom-[-24px] z-10 bg-yellow-500 text-white border-none rounded-full w-12 h-12 shadow-md cursor-pointer outline-none flex items-center justify-center hover:bg-gray-700"
+          >
             <AddIcon />
           </button>
         </Zoom>

@@ -30,7 +30,7 @@ function Footer() {
           <LinkedInIcon />
         </a>
       </div>
-      <p className="mt-3">Copyright ⓒ {year}</p>
+      <p className="mt-3">Wojciech Zielinski ⓒ {year}</p>
     </footer>
   );
 }

@@ -24,18 +24,19 @@ function Header() {
   }, []);
 
   return (
-    <header className="bg-yellow-500 w-full py-4 px-5 md:p-8 shadow-md flex flex-wrap justify-center items-center text-sm sm:text-base md:text-lg lg:text-xl text-white">
-      {" "}
-      <button className="md:hidden  absolute left-4" onClick={toggleSidebar}>
-        <svg className="w-10 h-10 logo hover:text-gray-700">
-          <MenuIcon />
-        </svg>
+    <header className="bg-yellow-500 w-full py-4 px-5 md:p-8 shadow-lg flex flex-wrap justify-center items-center text-sm sm:text-base md:text-lg lg:text-xl text-white">
+      <button className="md:hidden absolute left-4" onClick={toggleSidebar}>
+        <MenuIcon
+          style={{ width: 30, height: 30 }}
+          className="hover:text-gray-700"
+        />
       </button>
-      <a href="/" class="d-flex align-items-center me-md-auto font-mclaren hover:text-gray-700">
-        <svg class="bi me-2 " width="40" height="32">
-          <HighlightIcon />
-        </svg>
-        <span class="text-3xl">Keeper</span>
+      <a
+        href="/"
+        className="flex items-center md:mr-auto font-mclaren hover:text-gray-700"
+      >
+        <HighlightIcon style={{ width: 36, height: 36 }} />
+        <span className="text-3xl">Keeper</span>
       </a>
       <nav className="hidden md:flex space-x-8">
         <a href="/" className="font-mclaren hover:text-gray-700">
@@ -51,15 +52,19 @@ function Header() {
         }`}
       >
         <button className="absolute top-4 right-4" onClick={toggleSidebar}>
-          <svg className="w-10 h-10 hover:text-gray-700">
-            <CloseIcon />
-          </svg>
+          <CloseIcon
+            style={{ width: 30, height: 30 }}
+            className="hover:text-gray-700"
+          />
         </button>
         <nav className="flex flex-col space-y-4">
           <a href="/" className="font-mclaren hover:text-gray-700 text-2xl">
             Home
           </a>
-          <a href="/about" className="font-mclaren hover:text-gray-700 text-2xl">
+          <a
+            href="/about"
+            className="font-mclaren hover:text-gray-700 text-2xl"
+          >
             About
           </a>
         </nav>

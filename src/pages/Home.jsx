@@ -6,23 +6,19 @@ function Home() {
   const [notes, setNotes] = useState([]);
 
   function addNote(newNote) {
-    setNotes((prevNotes) => {
-      return [...prevNotes, newNote];
-    });
+    setNotes((prevNotes) => [...prevNotes, newNote]);
   }
 
   function deleteNote(id) {
-    setNotes((prevNotes) => {
-      return prevNotes.filter((noteItem, index) => {
-        return index !== id;
-      });
-    });
+    setNotes((prevNotes) =>
+      prevNotes.filter((noteItem, index) => index !== id)
+    );
   }
 
   return (
-    <div className="container">
+    <div className="px-6 pb-12 md:px-12">
       <CreateArea onAdd={addNote} />
-      <div className="notes">
+      <div className="flex justify-center flex-wrap gap-5">
         {notes.map((noteItem, index) => {
           return (
             <Note
