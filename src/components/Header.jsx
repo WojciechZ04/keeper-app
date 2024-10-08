@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import HighlightIcon from "@mui/icons-material/Highlight";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+// import "../styles.css";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,18 +25,21 @@ function Header() {
   }, []);
 
   return (
-    <header className="bg-yellow-500 w-full py-4 px-5 md:p-8 shadow-md flex flex-wrap justify-center items-center text-sm sm:text-base md:text-lg lg:text-xl text-white">
+    <header className="bg-yellow-500 w-full py-4 px-5 md:p-8 shadow flex flex-wrap justify-center items-center text-sm sm:text-base md:text-lg lg:text-xl text-white">
       {" "}
-      <button className="md:hidden  absolute left-4" onClick={toggleSidebar}>
+      <button className="md:hidden absolute left-4" onClick={toggleSidebar}>
         <svg className="w-10 h-10 logo hover:text-gray-700">
           <MenuIcon />
         </svg>
       </button>
-      <a href="/" class="d-flex align-items-center me-md-auto font-mclaren hover:text-gray-700">
-        <svg class="bi me-2 " width="40" height="32">
+      <a
+        href="/"
+        className="flex items-center md:mr-auto font-mclaren hover:text-gray-700"
+      >
+        <svg className="bi me-2 " width="40" height="32">
           <HighlightIcon />
         </svg>
-        <span class="text-3xl">Keeper</span>
+        <span className="text-3xl">Keeper</span>
       </a>
       <nav className="hidden md:flex space-x-8">
         <a href="/" className="font-mclaren hover:text-gray-700">
@@ -59,7 +63,10 @@ function Header() {
           <a href="/" className="font-mclaren hover:text-gray-700 text-2xl">
             Home
           </a>
-          <a href="/about" className="font-mclaren hover:text-gray-700 text-2xl">
+          <a
+            href="/about"
+            className="font-mclaren hover:text-gray-700 text-2xl"
+          >
             About
           </a>
         </nav>

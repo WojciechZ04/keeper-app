@@ -68,13 +68,13 @@ function CreateArea(props) {
   return (
     <div
       ref={createAreaRef}
-      className="relative bg-white p-4 rounded-lg shadow-xl md:w-[700px] mx-auto my-20 h-auto"
+      className="relative bg-white p-6 rounded-lg shadow-xl md:w-[700px] mx-auto my-20 h-auto"
     >
       <form className="create-note">
         {isExpanded && (
-          <div className="pb-2">
+          <div className="pb-3">
             <input
-              className="font-semibold outline-none text-xl h-auto resize-none border-b border-dotted border-b-[#c0b595] w-full"
+              className="font-semibold outline-none text-xl h-auto resize-none border-b border-dotted border-b-[#c0b595] w-full pb-2"
               name="title"
               onChange={handleChange}
               value={note.title}
