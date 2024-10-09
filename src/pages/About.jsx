@@ -16,6 +16,7 @@ function About() {
           </li>
         ))}
       </ul>
+      <p className="py-3">{data.secondDescription}</p>
 
       <div className="text-center">
         <p className="py-3">

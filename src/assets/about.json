@@ -1,6 +1,6 @@
 {
   "title": "About the project",
-  "description": "\"Keeper\" is a project inspired by Google Keep, designed to allow users to make quick notes and capture their ideas effortlessly. This project was completely focused on the React framework and was part of the curriculum in The Complete 2023 Web Development Bootcamp on Udemy. However, I expanded upon the original lessons by adding my own features, such as styling with Tailwind CSS, as well as numerous UI and UX improvements. The goal was to create a more dynamic and visually appealing user experience while maintaining a focus on simplicity and efficiency.",
+  "description": "\"Keeper\" is a project inspired by Google Keep, designed to allow users to make quick notes and capture their ideas effortlessly. This project was completely focused on the React library and was part of the curriculum in The Complete 2023 Web Development Bootcamp on Udemy. However, I expanded upon the original lessons by adding my own features, such as styling with Tailwind CSS, as well as numerous UI and UX improvements. The goal was to create a more dynamic and visually appealing user experience while maintaining a focus on simplicity and efficiency.",
   "technologiesTitle": "The application was built using the following technologies:",
   "technologies": [
     {
@@ -13,7 +13,8 @@
     },
     {
       "name": "Version Control with Git",
-      "description": " for project collaboration and tracking progress."
+      "description": " to manage code changes, maintain a clean project history, and ensure easy rollback in case of issues during development."
     }
-  ]
+  ],
+  "secondDescription": "This version of the \"Keeper\" app is designed as a demo for my portfolio and focuses on demonstrating UI/UX design and React-based frontend capabilities. While authentication and database integration are crucial for a fully functional notes app, I chose not to implement them here as I've already covered similar backend functionality in other projects."
 }
